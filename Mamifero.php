@@ -12,10 +12,10 @@
 
         public function amamentar() {
             if ($this->sexo === "F") {
-                echo "<br />O animal está amamentando<br />";
+                echo "<br /><h3>O animal está amamentando</h3><br />";
             }
 
-            echo "<br />Não foi possível amamentar<br />";
+            echo "<br /><h3>Não foi possível amamentar</h3><br />";
         }
     }
 ?>

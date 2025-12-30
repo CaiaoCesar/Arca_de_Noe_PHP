@@ -41,3 +41,23 @@ $arca->chamarAnimais();
 // Jane: Uh uh ah ah!
 // Simba: ROOOAAAR!
 // Nala: ROOOAAAR!
+
+print_r($arca);
+
+// Testes de outras funções
+
+// Buscar animal por nome
+$arca->buscarAnimalPorNome("George");
+// Saída:
+// Animal encontrado com o respectivo nome: George
+// Animal: George
+
+// Contar animais
+echo $arca->contarAnimais();
+
+// Desembarcar
+echo $arca->desembarcar("George");
+echo $arca->desembarcar("Jane");
+echo $arca->desembarcar("Simba");
+echo $arca->desembarcar("Nala");
+echo $arca->desembarcar("Tarzan");
