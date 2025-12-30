@@ -10,20 +10,25 @@
         }
 
         public function embarcar(Animal $animal){
+            if (isset($this->animais[get_class($animal) . $animal->getSexo()])){
+                echo "<br /><h3>Animal '" . $animal->getNome() . ", Sexo: " . $animal->getSexo() . ", Peso: " . $animal->getPeso() . "'Já existe na arca!</h3><br />";
+                return false;
+            }
             $this->animais[] = $animal;
             echo "<br /><h3>Animal '" . $animal->getNome() . ", Sexo: " . $animal->getSexo() . ", Peso: " . $animal->getPeso() . "'Adicionado à Arca.</h3><br />";
         }
 
-        public function desembarcar($nome) {
-            if (isset($this->animais[$nome])) {
-                unset($this->animais[$nome]);
-                echo "<br /><h3>Animal " . $nome. "desembarcado!</h3><br />";
-                return true;      
+       public function desembarcar($nome) {
+            foreach ($this->animais as $key => $animal) {
+                if ($animal->getNome() === $nome) {
+                    unset($this->animais[$key]);
+                    echo "<br /><h3>Animal $nome desembarcado!</h3><br />";
+                    return true;
+                }
             }
-            echo "<br /><h3>Animal " . $nome. " não desembarcado!<h3><br />";
-            return false; 
-            
-        }
+            echo "<br /><h3>Animal $nome não encontrado!</h3><br />";
+            return false;
+        }   
 
         public function listarAnimais() {
             echo "<br /><h2><strong> - Lista de Animais na Arca: </strong><h2><br />";
@@ -46,7 +51,7 @@
         }
 
         public function contarAnimais() {
-            echo "<br />Total de " . count($this->animais) . " animais na " . $this->nome . "<br />";                                                                                                                                                                                                                                    
+            echo "<br /><h2>Total de " . count($this->animais) . " animais na " . $this->nome . "</h2><br />";                                                                                                                                                                                                                                    
         }
 
         public function chamarAnimais(){

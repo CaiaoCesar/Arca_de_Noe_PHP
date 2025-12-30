@@ -61,3 +61,6 @@ echo $arca->desembarcar("Jane");
 echo $arca->desembarcar("Simba");
 echo $arca->desembarcar("Nala");
 echo $arca->desembarcar("Tarzan");
+
+// Listar todos
+$arca->listarAnimais();
