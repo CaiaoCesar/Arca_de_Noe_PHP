@@ -1,4 +1,6 @@
 <?php 
+    require_once("Ave.php");
+    
     class Garca extends Ave {
         public function emitirSom() {
             echo "<br />Craak craak!<br />"; 

@@ -6,6 +6,7 @@
 
         public function __construct($nomeArca){
             $this->nome = $nomeArca; 
+            echo "<br />Arca <strong>" . $this->nome . "</strong> criada.<br />";
         }
 
         public function embarcar(Animal $animal){
