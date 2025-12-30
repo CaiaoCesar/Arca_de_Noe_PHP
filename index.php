@@ -56,11 +56,11 @@ $arca->buscarAnimalPorNome("George");
 echo $arca->contarAnimais();
 
 // Desembarcar
-echo $arca->desembarcar("George");
-echo $arca->desembarcar("Jane");
-echo $arca->desembarcar("Simba");
-echo $arca->desembarcar("Nala");
-echo $arca->desembarcar("Tarzan");
+$arca->desembarcar("George");
+$arca->desembarcar("Jane");
+$arca->desembarcar("Simba");
+$arca->desembarcar("Nala");
+$arca->desembarcar("Tarzan");
 
 // Listar todos
 $arca->listarAnimais();

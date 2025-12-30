@@ -10,30 +10,32 @@
         }
 
         public function embarcar(Animal $animal){
-            if (isset($this->animais[get_class($animal) . $animal->getSexo()])){
-                echo "<br /><h3>Animal '" . $animal->getNome() . ", Sexo: " . $animal->getSexo() . ", Peso: " . $animal->getPeso() . "'Já existe na arca!</h3><br />";
+            $className = get_class($animal);
+            $sex = $animal->getSexo();
+            if (isset($this->animais[$className . $sex])) {
+                echo "<br /><h3>Especie: '" . $className . "', do Sexo: " . $sex .  ", do Animal '" . $animal->getNome() . "'Já existe na arca!</h3><br />";
                 return false;
             }
-            $this->animais[] = $animal;
-            echo "<br /><h3>Animal '" . $animal->getNome() . ", Sexo: " . $animal->getSexo() . ", Peso: " . $animal->getPeso() . "'Adicionado à Arca.</h3><br />";
+            $this->animais[$className . $sex] = $animal;
+            echo "<h3>Especie: " . $className . ", Nome: '" . $animal->getNome() . "', Sexo: " . $sex . "', Peso: " . $animal->getPeso() . "'Adicionado à Arca.</h3>";
         }
 
        public function desembarcar($nome) {
             foreach ($this->animais as $key => $animal) {
                 if ($animal->getNome() === $nome) {
                     unset($this->animais[$key]);
-                    echo "<br /><h3>Animal $nome desembarcado!</h3><br />";
+                    echo "<h3>Animal $nome desembarcado!</h3>";
                     return true;
                 }
             }
-            echo "<br /><h3>Animal $nome não encontrado!</h3><br />";
+            echo "<h3>Animal $nome não encontrado!</h3>";
             return false;
         }   
 
         public function listarAnimais() {
-            echo "<br /><h2><strong> - Lista de Animais na Arca: </strong><h2><br />";
+            echo "<br /><h2><strong> - Lista de Animais na Arca: </strong><h2>";
             foreach ($this->animais as $animal) {
-                echo "<br /><h3>Animal: " . $animal->getNome() . ", Sexo: " . $animal->getSexo() . ", Peso: " . $animal->getPeso() . "</h3><br />";
+                echo "<h3>Animal: " . $animal->getNome() . ", Sexo: " . $animal->getSexo() . ", Peso: " . $animal->getPeso() . "</h3>";
             }
         }
 
@@ -46,7 +48,7 @@
             } 
             echo "<h3>Animal encontrado com o respectivo nome: " . $nomePesquisado . "</h3><br />";
             foreach ($resultadoBusca as $animal) {
-                echo "<br />Animal: " .$animal->getNome() . "<br />";
+                echo "Animal: " .$animal->getNome() . " Sexo: " . $animal->getSexo() . " Peso: " . $animal->getPeso();
             }
         }
 
@@ -55,8 +57,9 @@
         }
 
         public function chamarAnimais(){
+            echo "<br /><h2> Chamando os animais...</h2><br />";
             foreach ($this->animais as $animal) {
-                echo "<br /><h3>Animal: " . $animal->getNome() . "</h3><br />";
+                echo "<h3>Animal: " . $animal->getNome() . "</h3>";
                 $animal->emitirSom(); 
                 echo "<br />";  
             }
