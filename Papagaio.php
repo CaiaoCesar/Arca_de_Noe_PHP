@@ -1,7 +1,7 @@
 <?php
     class Papagaio extends Ave {
         public function emitirSom() {
-            echo "Loro quer biscoito!";
+            echo "<br />Loro quer biscoito!<br />";
         }
 
         public function falar($frase) {

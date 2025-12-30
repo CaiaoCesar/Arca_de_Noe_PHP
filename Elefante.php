@@ -1,11 +1,11 @@
 <?php 
     class Elefante extends Mamifero {
         public function emitirSom(){
-            echo "Pruuuuu!";
+            echo "<br />Pruuuuu!<br />";
         }
 
         public function jogarAgua() {
-            echo "{$this->nome} jogou água com a tromba!";
+            echo "<br />{$this->nome} jogou água com a tromba!<br />";
         }
     }
 ?>

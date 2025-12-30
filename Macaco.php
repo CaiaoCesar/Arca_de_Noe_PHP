@@ -1,11 +1,11 @@
 <?php 
     class Macaco extends Mamifero{
         public function emitirSom(){
-            echo "Uh uh ah ah!";
+            echo "<br />Uh uh ah ah!<br />";
         }
 
         public function escalarArvore() {
-            echo "{$this->nome} subiu na árvore!";
+            echo "<br />{$this->nome} subiu na árvore!<br />";
         }
     }
 ?>

@@ -1,11 +1,11 @@
 <?php 
     class Garca extends Ave {
         public function emitirSom() {
-            echo "Craak craak!"; 
+            echo "<br />Craak craak!<br />"; 
         }
 
         public function pescar() {
-            echo "{$this->nome} pescou um peixe!";
+            echo "<br />{$this->nome} pescou um peixe!<br />";
         }
     }
 ?>

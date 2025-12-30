@@ -23,20 +23,20 @@
         }
 
         public function emitirSom() {
-            echo "O animal está fazendo barulho...";
+            echo "<br />O animal está fazendo barulho...<br />";
         }
 
         public function comer() {
-            echo "O " . $this->getNome() . " está comendo...";
+            echo "<br />O " . $this->getNome() . " está comendo...<br />";
         }
 
         public function dormir() {
-            echo "O " . $this->getNome() . " está dormindo...";
+            echo "<br />O " . $this->getNome() . " está dormindo...<br />";
         }
 
         public function analisaSexo() {
             if ($this->sexo != "F" || $this->sexo != "M") {
-                echo "Ideologia de Genero não!";
+                echo "<br />Ideologia de Genero pra bicho não!<br />";
             }
         }
     }

@@ -1,11 +1,11 @@
 <?php 
     class Tartaruga extends Reptil {
         public function emitirSom() {
-            echo "... (tartarugas são silenciosas) ...";
+            echo "<br />... (tartarugas são silenciosas) ...<br />";
         }
 
         public function esconderNoCasco() {
-            echo "{$this->nome} se escondeu no casco!";
+            echo "<br />{$this->nome} se escondeu no casco!<br />";
         }
     }
 ?>

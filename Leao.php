@@ -1,11 +1,11 @@
 <?php 
     class Leao extends Mamifero{
         public function emitirSom(){
-            echo "ROOOAAAR!"; 
+            echo "<br />ROOOAAAR!<br />"; 
         }
         
          public function cacar() {
-            echo "{$this->nome} está caçando!";
+            echo "<br />{$this->nome} está caçando!<br />";
         }
     }
 ?>

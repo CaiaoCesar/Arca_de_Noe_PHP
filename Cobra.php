@@ -1,11 +1,11 @@
 <?php 
     class Cobra extends Reptil {
         public function emitirSom() {
-            echo "Ssssssss!";
+            echo "<br />Ssssssss!<br />";
         }
 
         public function darBote() {
-            echo "{$this->nome} deu um bote!";
+            echo "<br />{$this->nome} deu um bote!<br />";
         }
     }
 ?>
